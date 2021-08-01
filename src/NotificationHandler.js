@@ -20,14 +20,15 @@ export default class NotificationHandler extends React.Component {
         this.notificationContainer = notificationContainer
     }
     render() {
+        const { onClickClose, notifications } = this.props
         return ReactDOM.createPortal(
             <div className="flex flex-col">
                 {
-                    this.props.notifications.map((notification) => {
-                        const { title, message } = notification
+                    notifications.map((notification) => {
+                        const { title, message, id } = notification
                         return (
                             <div key={notification.id}>
-                                <ToastComponent title={title} message={message} />
+                                <ToastComponent title={title} message={message} id={id} onClickClose={onClickClose} />
                             </div>
                         )
                     })

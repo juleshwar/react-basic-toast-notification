@@ -42,7 +42,7 @@ class App extends React.Component {
           <button className="bg-gray px-4 py-2 border rounded" onClick={this.onClickTriggerNotification}>Trigger Notification</button>
           <button className="bg-gray px-4 py-2 border rounded mt-2" onClick={this.onClickClearNotifications}>Clear All Notifications</button>
         </div>
-        <NotificationHandler notifications={this.state.notifications} />
+        <NotificationHandler notifications={this.state.notifications} onClickClose={this.onClickCloseNotification} />
       </>
     );
   }
