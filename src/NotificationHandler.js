@@ -15,13 +15,13 @@ export default class NotificationHandler extends React.Component {
     }
     setupNotificationContainer() {
         const notificationContainer = document.createElement('div')
-        notificationContainer.classList.add("fixed", "z-10", "h-full", "w-full", "top-0", "left-0")
+        notificationContainer.classList.add("fixed", "z-10", "top-0", "right-0")
         notificationContainer.id = 'notifications-container'
         this.notificationContainer = notificationContainer
     }
     render() {
         return ReactDOM.createPortal(
-            <>
+            <div className="flex flex-col">
                 {
                     this.props.notifications.map((notification) => {
                         const { title, message } = notification
@@ -32,7 +32,7 @@ export default class NotificationHandler extends React.Component {
                         )
                     })
                 }
-            </>,
+            </div>,
             this.notificationContainer
         )
     }
