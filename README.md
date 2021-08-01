@@ -1,4 +1,4 @@
-# razor-react
+# toast-notification
 
 Empty project.
 
