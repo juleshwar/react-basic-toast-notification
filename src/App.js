@@ -9,6 +9,7 @@ class App extends React.Component {
     }
     this.onClickTriggerNotification = this.onClickTriggerNotification.bind(this);
     this.onClickClearNotifications = this.onClickClearNotifications.bind(this);
+    this.onClickCloseNotification= this.onClickCloseNotification.bind(this);
   }
   onClickTriggerNotification() {
     const notificationId = this.state.notificationCounter;
@@ -27,6 +28,11 @@ class App extends React.Component {
   onClickClearNotifications() {
     this.setState({
       notifications: []
+    })
+  }
+  onClickCloseNotification(notificationId) {
+    this.setState({
+      notifications: this.state.notifications.filter(notification => notification.id !== notificationId)
     })
   }
   render() {
