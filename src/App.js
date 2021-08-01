@@ -32,9 +32,9 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <div className="py-5 flex justify-around">
+        <div className="p-5 flex flex-col items-start">
           <button className="bg-gray px-4 py-2 border rounded" onClick={this.onClickTriggerNotification}>Trigger Notification</button>
-          <button className="bg-gray px-4 py-2 border rounded" onClick={this.onClickClearNotifications}>Clear All Notifications</button>
+          <button className="bg-gray px-4 py-2 border rounded mt-2" onClick={this.onClickClearNotifications}>Clear All Notifications</button>
         </div>
         <NotificationHandler notifications={this.state.notifications} />
       </>
