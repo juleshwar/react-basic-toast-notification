@@ -35,8 +35,8 @@ class App extends React.Component {
         <div className="py-5 flex justify-around">
           <button className="bg-gray px-4 py-2 border rounded" onClick={this.onClickTriggerNotification}>Trigger Notification</button>
           <button className="bg-gray px-4 py-2 border rounded" onClick={this.onClickClearNotifications}>Clear All Notifications</button>
-          <NotificationHandler notifications={this.state.notifications} />
         </div>
+        <NotificationHandler notifications={this.state.notifications} />
       </>
     );
   }
