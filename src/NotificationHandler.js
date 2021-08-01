@@ -15,7 +15,7 @@ export default class NotificationHandler extends React.Component {
     }
     setupNotificationContainer() {
         const notificationContainer = document.createElement('div')
-        notificationContainer.classList.add("fixed", "z-10", "top-0", "right-0")
+        notificationContainer.classList.add("fixed", "z-10", "top-0", "right-0", "h-full", "overflow-y-scroll")
         notificationContainer.id = 'notifications-container'
         this.notificationContainer = notificationContainer
     }
