@@ -11,7 +11,18 @@ class App extends React.Component {
     this.onClickClearNotifications = this.onClickClearNotifications.bind(this);
   }
   onClickTriggerNotification() {
-    // trigger a notification
+    const notificationId = this.state.notificationCounter;
+    this.setState({
+      notifications: [
+        {
+          id: notificationId,
+          title: "Notification " + notificationId,
+          message: "This is a notification message",
+        },
+        ...this.state.notifications
+      ],
+      notificationCounter: notificationId + 1
+    })
   }
   onClickClearNotifications() {
     // clear all notifications
