@@ -25,7 +25,9 @@ class App extends React.Component {
     })
   }
   onClickClearNotifications() {
-    // clear all notifications
+    this.setState({
+      notifications: []
+    })
   }
   render() {
     return (
